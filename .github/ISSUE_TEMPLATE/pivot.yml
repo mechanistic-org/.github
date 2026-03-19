@@ -1,7 +1,7 @@
 name: "⛔ Pivot"
 description: "Strategic shifts in architectural direction or business logic."
 title: "[Pivot]: "
-labels: ["Type: Pivot"]
+labels: ["Pivot"]
 body:
   - type: markdown
     attributes:

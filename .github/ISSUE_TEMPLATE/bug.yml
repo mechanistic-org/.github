@@ -1,7 +1,7 @@
 name: "🐛 Bug"
 description: "Active failure throwing 500s or halting a pipeline."
 title: "[Bug]: "
-labels: ["Type: Bug"]
+labels: ["bug"]
 body:
   - type: markdown
     attributes:

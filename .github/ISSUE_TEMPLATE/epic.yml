@@ -1,7 +1,7 @@
 name: "👑 Epic"
 description: "Massive, cross-repository strategic goals or architectural buildouts."
 title: "[Epic]: "
-labels: ["Type: Epic"]
+labels: ["Epic"]
 body:
   - type: markdown
     attributes:

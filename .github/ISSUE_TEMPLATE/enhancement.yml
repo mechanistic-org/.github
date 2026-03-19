@@ -1,7 +1,7 @@
 name: "🚀 Enhancement"
 description: "Building net-new capabilities, UI/UX polish, or expanding the feature surface."
 title: "[Enhancement]: "
-labels: ["Type: Enhancement"]
+labels: ["enhancement"]
 body:
   - type: markdown
     attributes:

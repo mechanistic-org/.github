@@ -1,7 +1,7 @@
 name: "⚙️ Task"
 description: "Standard routine execution, maintenance, refactoring, or script building."
 title: "[Task]: "
-labels: ["Type: Task"]
+labels: ["Task"]
 body:
   - type: markdown
     attributes:

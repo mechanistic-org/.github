@@ -1,7 +1,7 @@
 name: "🩺 Validation"
 description: "Quality assurance, benchmarking, or creating unit tests specifically to cage agents."
 title: "[Validation]: "
-labels: ["Type: Validation"]
+labels: ["Validation"]
 body:
   - type: markdown
     attributes:
