@@ -1,0 +1,27 @@
+name: "⚙️ Task"
+description: "Standard routine execution, maintenance, refactoring, or script building."
+title: "[Task]: "
+labels: ["Type: Task"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## ⚙️ Standard Task
+        Atomic unit of work for agents or human execution.
+  - type: textarea
+    id: description
+    attributes:
+      label: Task Description
+      description: What explicitly needs to be done?
+    validations:
+      required: true
+  - type: textarea
+    id: execution_steps
+    attributes:
+      label: Execution Steps (For Agents)
+      description: Provide clear, sequential steps for autonomous agents (e.g., Antigravity/Node 0) to execute.
+  - type: input
+    id: target_files
+    attributes:
+      label: Target Files / Topological Coordinates
+      description: Absolute paths or explicit files to be mutated.

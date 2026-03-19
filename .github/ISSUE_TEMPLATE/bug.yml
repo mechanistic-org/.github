@@ -1,0 +1,27 @@
+name: "🐛 Bug"
+description: "Active failure throwing 500s or halting a pipeline."
+title: "[Bug]: "
+labels: ["Type: Bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 🐛 Bug Report
+        Provide the explicit stack trace, failing node, or broken pipeline.
+  - type: textarea
+    id: description
+    attributes:
+      label: Describe the Bug
+      description: A clear and concise description of what the malfunction is.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reproduction Steps
+      description: Provide the exact steps (or pipeline triggers) to reproduce the behavior.
+  - type: textarea
+    id: logs
+    attributes:
+      label: Error Logs / Stack Traces
+      description: Paste any relevant terminal logs or Cloudflare/Vercel error outputs.

@@ -1,0 +1,27 @@
+name: "🚀 Enhancement"
+description: "Building net-new capabilities, UI/UX polish, or expanding the feature surface."
+title: "[Enhancement]: "
+labels: ["Type: Enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 🚀 Feature Enhancement
+        Define the new capability being added to the system.
+  - type: textarea
+    id: requirement
+    attributes:
+      label: The Requirement / Value
+      description: What are we building and why does it add value (Revenue/Aesthetics/Sovereignty)?
+    validations:
+      required: true
+  - type: textarea
+    id: implementation
+    attributes:
+      label: Proposed Implementation
+      description: Brief technical outline of the new code, components, or pipeline steps.
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives Considered
+      description: Did you consider a simpler approach?

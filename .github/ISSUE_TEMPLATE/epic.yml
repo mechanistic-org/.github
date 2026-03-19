@@ -1,0 +1,29 @@
+name: "👑 Epic"
+description: "Massive, cross-repository strategic goals or architectural buildouts."
+title: "[Epic]: "
+labels: ["Type: Epic"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 👑 Epic / Initiative
+        Define the strategic goal, the impacted repositories, and the measure of success. Do not put execution code in this ticket.
+  - type: textarea
+    id: overview
+    attributes:
+      label: Strategic Overview
+      description: What is the high-level goal of this Epic?
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: Boundary Constraints & Impact
+      description: Which repositories, systems, and pipelines are affected? What is explicitly out of scope?
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Definition of Done
+      description: How do we know this initiative is mathematically complete?
+    validations:
+      required: true

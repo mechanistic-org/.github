@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Autonomous Operations Constraint
+    url: https://github.com/mechanistic-org/.github
+    about: "Human input only via structured templates. Blank issues are disabled to prevent agents from creating unformatted technical debt."

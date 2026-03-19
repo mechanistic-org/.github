@@ -1,0 +1,29 @@
+name: "⛔ Pivot"
+description: "Strategic shifts in architectural direction or business logic."
+title: "[Pivot]: "
+labels: ["Type: Pivot"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## ⛔ Architectural Pivot
+        Explicit documentation of a design change that agents must adapt to.
+  - type: textarea
+    id: current_state
+    attributes:
+      label: Current Paradigm
+      description: Describe the current failing architecture or business logic.
+    validations:
+      required: true
+  - type: textarea
+    id: vector
+    attributes:
+      label: The New Vector
+      description: Describe the new architectural mandate or structural logic.
+    validations:
+      required: true
+  - type: textarea
+    id: impact
+    attributes:
+      label: Downstream Impact
+      description: What existing systems, pipelines, or repos will explicitly break because of this pivot?

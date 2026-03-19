@@ -1,0 +1,22 @@
+name: "🩺 Validation"
+description: "Quality assurance, benchmarking, or creating unit tests specifically to cage agents."
+title: "[Validation]: "
+labels: ["Type: Validation"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 🩺 Testing & Validation
+        Used for Quality Assurance, CI/CD verification, or expanding the constraint cage.
+  - type: textarea
+    id: scope
+    attributes:
+      label: Target System
+      description: What pipeline, component, or agent output needs validation?
+    validations:
+      required: true
+  - type: textarea
+    id: tests
+    attributes:
+      label: Success Criteria / Tests Required
+      description: What specific assertions or manual tests must pass?
