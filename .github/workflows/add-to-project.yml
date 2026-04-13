@@ -1,0 +1,19 @@
+name: Add to Project Board (reusable)
+
+# Reusable workflow called by board-sync.yml in every repo.
+# Single place to change the project URL for the whole org.
+#
+# Secret required: ADD_TO_PROJECT_PAT (org-level secret)
+# Scopes: repo + project
+
+on:
+  workflow_call:
+
+jobs:
+  add-to-project:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/add-to-project@v1.0.2
+        with:
+          project-url: https://github.com/orgs/mechanistic-org/projects/5
+          github-token: ${{ secrets.ADD_TO_PROJECT_PAT }}
