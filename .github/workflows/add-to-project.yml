@@ -3,8 +3,15 @@ name: Add to Project Board (reusable)
 # Reusable workflow called by board-sync.yml in every repo.
 # Single place to change the project URL for the whole org.
 #
-# Secret required: ADD_TO_PROJECT_PAT (org-level secret)
-# Scopes: repo + project
+# Auth: org-owned GitHub App "Board Sync". A short-lived token is minted
+# per-run by actions/create-github-app-token — no PAT to rotate, ever.
+#
+# Required org secrets (visibility: all repos):
+#   BOARD_SYNC_APP_ID           - the App's numeric App ID
+#   BOARD_SYNC_APP_PRIVATE_KEY  - the App's .pem private key (full contents)
+# Required App permissions:
+#   Organization > Projects: Read and write
+#   Repository   > Issues:   Read-only   (Metadata: Read-only is automatic)
 
 on:
   workflow_call:
@@ -13,7 +20,17 @@ jobs:
   add-to-project:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/add-to-project@v1.0.2
+      - name: Mint GitHub App token
+        id: app-token
+        uses: actions/create-github-app-token@v1
+        with:
+          app-id: ${{ secrets.BOARD_SYNC_APP_ID }}
+          private-key: ${{ secrets.BOARD_SYNC_APP_PRIVATE_KEY }}
+          # org-scoped token so it can write the org Project from any caller repo
+          owner: mechanistic-org
+
+      - name: Add issue to project
+        uses: actions/add-to-project@v2.0.0
         with:
           project-url: https://github.com/orgs/mechanistic-org/projects/5
-          github-token: ${{ secrets.ADD_TO_PROJECT_PAT }}
+          github-token: ${{ steps.app-token.outputs.token }}
